@@ -1,0 +1,509 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.green.css" integrity="sha512-riTSV+/RKaiReucjeDW+Id3WlRLVZlTKAJJOHejihLiYHdGaHV7lxWaCfAvUR0ErLYvxTePZpuKZbrTbwpyG9w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link id="theme-style" rel="stylesheet" type="text/css" href="">
+    <title>Aishwarya</title>
+  </head>
+  <body>
+    
+   
+
+    <section class="s1">
+      <div class="main-container">
+        <div class="greeting-wrapper">
+          <h1>Hi, I'm Aishwarya Kanchan</h1>
+        </div>
+  
+  
+        <div class="intro-wrapper">
+          <div class="nav-wrapper">
+  
+            <!-- Link around dots-wrapper added after tutorial video -->
+            <a href="{% url 'home' %}">
+              <div class="dots-wrapper">
+                <div id="dot-1" class="browser-dot"></div>
+                <div id="dot-2" class="browser-dot"></div>
+                <div id="dot-3" class="browser-dot"></div>
+              </div>
+            </a>
+            
+  
+            <ul id="navigation">
+              <li><a href="{% url 'home' %}#contact">Contact</a></li>
+              <li><a href="{% url 'blog' %}">Blogs</a></li>
+  
+            </ul>
+          </div>
+  
+          <div class="left-column">
+            <img id="profile_pic" class="img-fluid rounded-circle" src="/static/img/Aishwarya.png" alt="ajay">
+            <br>
+            <h5 style="text-align: center;line-height: 0;">Personalize Theme</h5>
+  
+            <div id="theme-options-wrapper">
+              <div data-mode="light" id="light-mode" class="theme-dot"></div>
+              <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+              <div data-mode="green" id="green-mode" class="theme-dot"></div>
+              <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+            </div>
+  
+            <p id="settings-note" >
+              <br>
+             
+                <a href="https://twitter.com/ashwarya98"    class="twitter ml-5  "><i class="bx bxl-twitter bx-sm bx-tada "></i></a>
+                <a href="https://github.com/Aishwaryak2998" class="github ml-5 "><i class="bx bxl-github bx-sm"></i></a>
+                <a href="https://www.instagram.com/aishwaryak98/" class="instagram ml-5  "><i class="bx bxl-instagram bx-sm bx-spin"></i></a>
+                <a href="https://www.linkedin.com/in/aishwarya-kanchan-34b6841a5/" class="linkedin ml-5  "><i class="bx bxl-linkedin bx-sm"></i></a>
+                <!-- <a href="https://www.linkedin.com/in/ajay-magar-5773b5147/" class="linkedin ml-5  "><i class="bx bxl-google bx-sm"></i></a> -->
+            
+             
+            
+              </p>
+          </div>
+  
+          <div class="right-column">
+  
+            <div id="preview-shadow">
+              <div id="preview">
+                <div id="corner-tl" class="corner"></div>
+                <div id="corner-tr" class="corner"></div>
+                <h3>What I Do</h3>
+                <p> I've recently been interested in learning machine learning, 
+                  so I've been watching a lot of such videos. 
+                  In addition, I also perform freelancing service as a content writer</p>
+                <div id="corner-br" class="corner"></div>
+                <div id="corner-bl" class="corner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="s1">
+      <div class="main-container">
+        <a href=""></a>
+        <br>
+        <h3 style="text-align: center;">Projects</h3>
+        
+        <!--  testing     -->
+        <div class="row m-3">
+
+
+          {% for project in projects %}
+
+          <div class="col-md-4">
+            <!-- Card -->
+            <div class="card">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" width="250" height="250"  src="{{project.cardImage}}" alt="Card image cap">
+                
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                    <!-- Title -->
+                    <h4 class="card-title" style="color: black;"><a>{{ project.title }}</a></h4>
+                    <!-- Text -->
+                    <p class="card-text" style=" color:black "  >
+                      {{ project.description }}  </p>
+                    <!-- Button -->
+                     <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                        
+                     <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#{{project.model_taget}}">Read More
+                      </button>
+
+                    </div> 
+                    
+                
+                </div>
+               
+                <!-- Card -->
+        </div>
+        <div class="modal fade" id="{{project.model_taget}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-lg-5">
+                 <h3 style="color: black;" >under construction</h3>
+                 <p style="color: black;" > Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, cum! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, commodi. </p>
+                  <!--/.Carousel Wrapper-->
+                </div>
+                <div class="col-lg-7">
+                  <h2 class="h2-responsive product-name">
+                    <strong style="color: black;">{{ project.title }}</strong>
+                  </h2>
+                  
+                  
+                  <div>
+                      <h4 style="color: black;" >Features</h4>
+                      <ul class="dummy">
+                          <li >dummy Text</li>
+                          <li >dummy Text</li>
+                          <li >dummy Text</li> 
+                      </ul>
+                  </div>
+                  
+                    <br>
+                    <br>
+                    <br>
+  
+                    <div class="text-center  mt-5 ">
+                      <br><br>
+                      <div class="pl-3">
+                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary m-3">Github
+                         
+                      </div>
+                     
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.Add to Cart -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+
+
+          {% endfor %}
+         
+         
+
+
+
+
+      </div>
+
+        <!-- testing -->
+      </div> 
+
+      <!-- modal testing -->
+
+     
+
+
+
+
+      <!-- modal testing end -->
+
+
+    </section>
+
+    <!--  latest Blogs    -->
+
+    <section class="s2">
+      <div class="main-container">
+        <br>
+        <h3 style="text-align:center;">Latest Blogs</h3>
+        <br>
+        <br>
+       
+        <div class="owl-carousel owl-theme">
+          {% for blog in blogs %}  
+          <div class="item">
+           
+            <div class="card">
+
+              <!-- Card image -->
+              <img class="card-img-top" width="250" height="200" src="{{ blog.img }}" alt="Card image cap">
+          
+              <!-- Card content -->
+              <div class="card-body">
+          
+              <!-- Title -->
+              
+              <h4 class="card-title" style="color: black;"><a>{{ blog.title }}</a></h4>
+                
+              <!-- Text -->
+              <!-- <p class="card-text" style="color: black;"> {{ blog.short | slice:"0:500" }} </p> -->
+              <!-- Button -->
+               <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                  
+              <a href="/blogs/{{ blog.pk }}" class="btn btn-dark">Read More</a>
+
+              </div> 
+              
+       
+        </div>
+      </div>
+      {% endfor %}    
+        
+        </div>
+        <br>
+       
+
+
+        
+      </div>
+
+
+    </section>
+
+
+
+    <!--  blogs end   -->
+
+<!--          resume start   -->
+
+    <section class="s1">
+      <div class="main-container">
+        <a href=""></a>
+        <br>
+        <h3 style="text-align:center;">Resume</h3>
+        <br>
+        <br>
+
+        <div class="row">
+          <div class="col-lg-6">
+            
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering (EXTC Engineering)</h4>
+              <h5>August 2017-June 2021</h5>
+              <p><em>University of Mumbai, India</em></p>
+              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
+              <h4>Coursework:</h4>
+              <ul>
+                <li>Microcontrollers and Applications</li>
+                <li>Optical Communication</li>
+                <li>Image Processing and Integrated circuits</li>
+                <li>Digital Communication</li>
+              </ul>
+              <h4>Final Year Elective:</h4>
+              <ul>
+                <li>Cyber Security and Laws</li>
+                <li>Internet Communication Engineering</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Courses:</h4>
+              <h5> July 2020</h5>
+              <h5>Korean Language Course </h5>
+              <p><em>Online course by Yonsei University via Coursera that dealt in the basics of the language (grammar and syntax).</em></p>
+              <h5>Specialization in Python and IoT</h5>
+              <p>Applied plotting, charting and data representation by the University of Michigan (Coursera).
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Work Experience:</h3>
+            <div class="resume-item">
+              <h4>Working as an Associate Head for the content team for NGO –‘Greenthusiast Foundation’</h4>
+              <h5>May 2020-present</h5>
+              <p><em></em></p>
+              <ul>
+                <li>Create blogs and content for social media profiles like – LinkedIn, Instagram, Facebook, etc.</li>
+                <li> Administrative support to the Head with a heavy focus on calendaring and scheduling. </li>
+                <li>Supervising the maintenance of content inventories and matrices.</li>
+              </ul>
+              <h5>Working as an IoT project developer in the company IoTEDU Sept 2020-present</h5>
+              <ul>
+                <li>Worked under my mentor for a research paper on a project- Hydroponics</li>
+                <li>IoT and Cloud based projects.</li>
+                <li>Writing SEO optimized technical blogs and articles.</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Honors and Awards:</h4>
+              <h5>Semi-finalist in Deep Blue, technical competition held by Mastek and Majesco.</h5>
+              <p><em>Problem Statement: Public Health Washroom using IoT </em></p>
+              <h5>Intern of the month at Greenthusiast Foundation. 
+              </h5>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+
+    </section>
+
+
+
+<!--         contact section start    -->
+
+    <section class="s2">
+      <div class="main-container">
+        <a name="contact"></a>
+        <br>
+        <h3 style="text-align: center;">Get In Touch</h3>
+          <br>
+          <br>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                
+                <h4>Location:</h4>
+                <p> Sanpada , Navi Mumbai</p>
+              </div>
+
+              <div class="email">
+                <!-- <i class="icofont-envelope"></i> -->
+                
+                <h4>Email:</h4>
+                <p>Aishwarya2998@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9833070417</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="/" method="POST"  class="pform"   class="php-email-form">
+                {% csrf_token %}
+              
+                <div class="form-row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <div class="validate"></div>
+              </div>
+              
+              <div class="text-center"><button class="btn btn-primary" type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+
+
+
+        </div>
+        <br>
+
+    </section>
+
+
+    <!--         end   -->
+
+    <!--           footer start   -->
+
+    <section class="s1">
+      <div class="main-container">
+        <a href=""></a>
+        <br>
+        <h3 style="text-align: center;"></h3>
+  
+        <footer id="footer">
+          <div class="container">
+            <h6></h6>
+            <p>
+            </p>
+  
+                  <a href="https://twitter.com/ashwarya98"    class="twitter text-center ml-5  "><i class="bx bxl-twitter bx-sm bx-tada "></i></a>
+                  <a href="https://github.com/Aishwaryak2998" class="github ml-5 "><i class="bx bxl-github bx-sm"></i></a>
+                  <a href="https://www.instagram.com/aishwaryak98/" class="instagram ml-5  "><i class="bx bxl-instagram bx-sm bx-spin"></i></a>
+                  <a href="https://www.linkedin.com/in/aishwarya-kanchan-34b6841a5/" class="linkedin ml-5  "><i class="bx bxl-linkedin bx-sm"></i></a>
+            
+            <div class="copyright text-center p-4">
+              &copy; Copyright <strong><span></span></strong>. All Rights Reserved
+            </div>
+           
+          </div>
+        </footer>
+  
+        </div>  
+
+    </section>
+   
+
+    
+
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+      <div id="preloader"></div>
+
+    
+    
+  </body>
+  <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha512-0QbL0ph8Tc8g5bLhfVzSqxe9GERORsKhIn1IrpxDAgUsbBGz/V7iSav2zzW325XGd1OMLdL4UiqRJj702IeqnQ==" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+  <script src="/static/js/app.js"></script>
+  
+  
+  <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})  
+
+  </script>
+  
+
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        {% for blog in blogs %}
+        <div class="col-md-8">
+           
+                <br>
+                <div class="card">
+                    <!-- Card content -->
+                    <div class="card-body">
+                
+                    <!-- Social shares button -->
+                   
+                    <!-- Title -->
+                    <h4 class="card-title"> <a href="{% url 'Iblogs' blog.pk %}">{{ blog.title }}</a></h4>
+                    <hr>
+                    <!-- Text -->
+                    <p class="card-text"  style="color: black;font-family: 'Roboto', sans-serif; font-size: medium; " > {{ blog.short }} ......
+                       
+                    </p>
+                    <span>By Aishwarya Kanchan</span> | Date : {{ blog.created_at }}
+                    <!-- Link -->
+                    <br>
+                    <a href="{% url 'Iblogs' blog.pk %}" class="black-text d-flex justify-content-end">
+                        <h5>Read more <i class="fas fa-angle-double-right"></i></h5>
+                    </a>
+                    
+                    </div>
+                    <br>
+                    <br>
+
+                </div>
+                
+                
+
+        </div>
+                <div class="col-md-4 mb-5">
+                    <br>
+                     <img class="mb-5" width="400" height="350"  src="{{ blog.img }}" alt="image">
+                </div>
+
+
+        {% endfor %}
+    </div>
+</div>
+    
+
+
+{% endblock %}

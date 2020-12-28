@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "aishwarya-portfolio-299713",
+  "private_key_id": "6e1025cf56ee4d125d3f867d50d9643f1af4f68e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDezZRuFNzG7KVv\nFEBQbpkhWTFTN5PEwjbr+NVHuiHv2sntghyMZiMUWo3fzJebaFIc9SvcgmbfuPoE\niOkU3iYsIQ9bUK8+Ij06xxQs5UG4weoapKyPlOMtzK/MsQ0GSGbYiX0FLmyQ2SLm\neXxHV6w7q0avwPCqhLqx2jPP7w1x45AttzIBFoRAb0w/1T0ECCdRJ3jNDsEqwBvK\njqPs2jKujEHM/MT/7bIRzDSQ9uHIQ6EAyGR9OJ3CM3+gGbvCwMk9duwHO4sf2lY1\nn73H6Kxp2gzlH0dBPtQvbsKNE7tpmW2JGWzNXcJYKuHBzh9QPYgZHdbFdsw0emdP\nvy89Bh5LAgMBAAECggEABVX0C4zZWrQ5JAdeoO59IVTS/xSyJ8Ck8xLC/NRC0s0x\nD8yRZXVeurKOekEakmC1srbWZZID57C04B3tQxAs5tql1QCCKeFFCR7SZ17YK5YN\nRrUR4uBkbmjb/vFwh+l8+QuV4GVjuTZSBSX8qXK6j7VC3Juox9Sk6fR5UC3/6u3G\nRv38dqtwrVvIDzguYl3WtbuylVQDxTxwrr9HGaOE3/mhv1f/Xm1tedWeGPO0p54L\nfXCArzP9j8lWYSahigqefZB25QUc8JfeFmDeyuqvt/bzWG7XBvLlNgJP7d/mx24T\njghHkBFVk/hxYXVIQUlZl/cHYOC5qMm623TZ/JAfVQKBgQD6XeeBG7RTlz7khNG8\nTOpoNlaIPJgBoPYlcZMHOEMOBS5Uv7BJhD/Zx6FI3YMu6dv3QZhW9i0zPEGURIX+\nj9EkTqRSDYAmYgtTNX4OXX1yA5jwwUJDu3LeEASHPlzGqPv349Jmi6tP84JRMXRo\n+KLbN7vjP/g2lwD+zfPHwmBiDwKBgQDj0Oj67BY0xX7K5pstcLK7/nNDa2wMZ0HH\ngTIdk0vylobUgguHuoJkW5roBQnnqdnnUrii+81kMsaWN3JaKduTnQfdBBaUAm1x\nYqgPMhFqFZG3hUp3cjx7EoaKjFDn+c73N9uu2t+atokwwNlPfZduxBWkQ/07k5/L\n+SgPQDyMBQKBgQCagXDooCw8mc3aQI0eY2kVPtNP5/T2rFq66MgPYI0hDdl1u4YT\nGGY/A49o5CqcvP1eLUDSCcIDKGBgG5mFa0Np4I5PhL1c8oyCoTRVsSRFRCsSCHHY\nUsmkeMYSoE2o24gDhrjFR9RE1sXJTXfFgAsgtdhheYy4Q5/9nyOeVzobyQKBgEgb\n8CK8Z6r8eE2xAJ05dtmaiNFmRyUF6gREGKDT5s46ZyMMpqmnl248sKOQNLpnQNm/\njUHJghGdIM6bbk6rwRzQL5T9nkfrHMku+RMWPfzeJul3/0IfnpU2H+/qyhEjOSd3\nPsnx7aUC8hnEcQSANFaTKmZ8PsOEzqe5jbyGEKQhAoGBALi+wImbJ6bOq3FrSFMf\n0cU+pLBoiI6mRA39S7566wRJo1FlYLdR5oJDhEQse3gzESfHzgw3YwdA9Dpema7G\nVmsgss8I9vdKoVjl7wi+120QbKDbeFLURhegJNLTml3TNZA6AHqyCVKIVmvygaGu\nXi7bab7Nh5092YPnxgcWMZ5y\n-----END PRIVATE KEY-----\n",
+  "client_email": "aishwarya@aishwarya-portfolio-299713.iam.gserviceaccount.com",
+  "client_id": "111596244888612296277",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/aishwarya%40aishwarya-portfolio-299713.iam.gserviceaccount.com"
+}
