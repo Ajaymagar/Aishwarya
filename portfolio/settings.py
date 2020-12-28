@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'a5hi6$(fm8bi)$k^b5q-rsb-yo2sg0ns@c(^0x&-waw6co#&13'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -112,9 +112,12 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR , 'staticfiles')
 
+'''
 STATICFILES_DIRS = [
 	os.path.join(BASE_DIR  , 'static')          # root folder me static folder banno 
 ]
+'''
+
 
 
 
