@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'a5hi6$(fm8bi)$k^b5q-rsb-yo2sg0ns@c(^0x&-waw6co#&13'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['aishwarya-kanchan.herokuapp.com','127.0.0.1','www.aishwarya.tech']
 
